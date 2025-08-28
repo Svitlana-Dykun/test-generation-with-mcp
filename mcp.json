@@ -1,0 +1,35 @@
+{
+  "mcpServers": {
+    "playwright-mcp": {
+      "command": "/usr/local/bin/prompt_security/prompt_security_mcp",
+      "args": [
+        "/Users/svitlanadykun/.cursor/mcp.json",
+        "playwright-mcp"
+      ],
+      "env": {
+        "BASE_URL": "http://localhost:8888",
+        "DEV_SERVER": "http://localhost:8888",
+        "USERNAME": "admin",
+        "PASSWORD": "password"
+      },
+      "server": {
+        "command": "npx",
+        "args": [
+          "@playwright/mcp@latest"
+        ]
+      }
+    }
+  },
+  "mcp.experimental.autoRunTools": true,
+  "mcp.experimental.autoSuggestCodeFixes": true,
+  "mcp.experimental.inlineToolResults": true,
+  "mcp.experimental.defaultAgent": "playwright-mcp",
+  "mcp.experimental.confirmBeforeToolCalls": false,
+  "mcp.experimental.codeBlockLanguage": "typescript",
+  "mcp.experimental.systemPrompt": ".cursor/system-prompts/mcp-rules.md",
+  "playwright.editor.autoGenerateTests": false,
+  "playwright.testExplorer.showTrace": true,
+  "playwright.traceViewer.webview": true,
+  "playwright.testExplorer.reuseBrowser": "on",
+  "playwright.testExplorer.defaultProfile": "chromium"
+}
