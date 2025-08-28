@@ -105,6 +105,23 @@ Verify that:
 - Code review and refactoring
 - General project workflow tasks
 
+### Progress Tracking and Templates:
+
+#### Test Plan Creation:
+- Use `tests/docs/test-plans/TEMPLATE.md` as the base template
+- Create test plans in `tests/docs/test-plans/<widget>.<feature>.md`
+- Use bullet TC cards (no tables) for test cases
+
+#### Marking Progress:
+- Use `tests/scripts/mark-progress.ts` to mark completed test cases
+- Command: `npm run mark -- --plan tests/docs/test-plans/<widget>.<feature>.md --done <TC-IDs>`
+- Example: `npm run mark -- --plan tests/docs/test-plans/button.style.md --done TC-001,TC-002`
+
+#### Applying Test Selections:
+- Use `tests/scripts/apply-md-selection.ts` to apply selected test cases
+- Helps manage which test cases to implement next
+- Integrates with the test plan workflow
+
 ## Troubleshooting
 
 ### MCP Not Working?
